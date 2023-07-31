@@ -1,0 +1,26 @@
+{
+  "name": "music",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000T\u0000h\u0000e\u0000-\u0000b\u0000e\u0000s\u0000t\u0000-\u0000m\u0000u\u0000s\u0000i\u0000c\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samolazoff/The-best-music.git"
+  },
+  "author": "Samolazoff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samolazoff/The-best-music/issues"
+  },
+  "homepage": "https://github.com/samolazoff/The-best-music#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
