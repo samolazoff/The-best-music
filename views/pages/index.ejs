@@ -1,1 +1,11 @@
-<h2>Home</h2>
+<section class="news pg-block">
+    <h2 class="block__title">News</h2>
+    <ul class="block-news">
+        <% news.forEach(function(elem) { %>
+            <li class="block-news__item">
+                <h5 class="block-news__title"><%= elem.date %></h5>
+                <p class="block-news__txt"><%= elem.news %>.</p>
+            </li>
+        <% }); %>
+    </ul>
+</section>

@@ -1,0 +1,22 @@
+.logo{
+    padding: 0 10px;
+    margin: 0;
+}
+.pg-block{
+    padding: 0 10px;
+}
+.block-news{
+    margin-top: 25px;
+}
+.block-news__title{
+    text-decoration: underline;
+}
+.block-news__item{
+    border-bottom: 2px solid silver;
+}
+.block-news__txt{
+    font-size: 1.2rem;
+}
+.block__title{
+    text-align: center;
+}
