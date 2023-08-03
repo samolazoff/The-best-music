@@ -1,6 +1,10 @@
 import express from "express";
 import expressEjsLayouts from "express-ejs-layouts";
-import fs from 'fs';
+
+import homeRoutes from './routes/home.js';
+import aboutRoutes from './routes/about.js';
+import musicRoutes from './routes/music.js';
+import loginRoutes from './routes/login.js';
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -11,17 +15,11 @@ app.set('view engine', 'ejs');
 
 app.use(express.static( "public"));
 
+app.use(homeRoutes);
+app.use(aboutRoutes);
+app.use(musicRoutes);
+app.use(loginRoutes);
 
-app.get('/', (req, res) => {
-    const news=JSON.parse(fs.readFileSync('public/data/news.json', 'utf8'));
-    res.render('pages/index',
-        {
-            news,
-            title: "News",
-            isHome: true
-        }
-    );
-});
 app.listen(PORT, () => {
     console.log(`Server is runnig: ${PORT}`);
 });

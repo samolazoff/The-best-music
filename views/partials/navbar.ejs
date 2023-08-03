@@ -4,12 +4,39 @@
             <a href="#" class="brand-logo">Music</a>
         </h1>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <% if (isHome)
+            <% if (typeof isHome !== "undefined")
                 {%>
-                    <li class="active"><a href="/" class="active">Main</a></li>
+                    <li class="active"><a href="/" class="active">News</a></li>
                 <%}
                  else  {%>
-                    <li><a href="/" class="active">Main</a></li>
+                    <li><a href="/" class="active">News</a></li>
+                <%}
+            %>
+            
+            <% if (typeof isAbout !== "undefined")
+                {%>
+                    <li class="active"><a href="/about" class="active">About</a></li>
+                <%}
+                 else  {%>
+                    <li><a href="/about" class="active">About</a></li>
+                <%}
+            %>
+           
+            <% if (typeof isMusic !== "undefined")
+                {%>
+                    <li class="active"><a href="/music" class="active">Music</a></li>
+                <%}
+                 else  {%>
+                    <li><a href="/music" class="active">Music</a></li>
+                <%}
+            %>
+
+            <% if (typeof isLogin !== "undefined")
+                {%>
+                    <li class="active"><a href="/login" class="active">Login</a></li>
+                <%}
+                else  {%>
+                    <li><a href="/login" class="active">Login</a></li>
                 <%}
             %>
         </ul>
