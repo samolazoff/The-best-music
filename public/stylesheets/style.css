@@ -20,3 +20,9 @@
 .block__title{
     text-align: center;
 }
+.activator{
+    top: 10px !important; 
+}
+.music-items{
+    grid-gap: 20px;
+}

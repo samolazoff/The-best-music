@@ -1,0 +1,18 @@
+[
+    {
+        "id": "1",
+        "album": "Led Zepelen II",
+        "artist": "Led Zepelen",
+        "img": "https://avatars.yandex.net/get-music-content/49876/a81e3474.a.1987059-1/200x200",
+        "discription": "Led Zeppelin II is the second studio album by the English rock band Led Zeppelin, released on 22 October 1969 in the United States and on 31 October 1969 in the United Kingdom by Atlantic Records. Recording sessions for the album took place at several locations in both the United Kingdom and North America from January to August 1969. The album's production was credited to the band's lead guitarist and songwriter Jimmy Page, and it was also Led Zeppelin's first album on which Eddie Kramer served as engineer.",
+        "link": "https://en.wikipedia.org/wiki/Led_Zeppelin_II"
+    },
+    {
+        "id": "2",
+        "album": "Sgt. Pepper's Lonely Hearts Club Band",
+        "artist": "Beatles",
+        "img": "https://avatars.yandex.net/get-music-content/4401814/c03d0ec2.a.4404190-4/m1000x1000",
+        "discription": "Sgt. Pepper's Lonely Hearts Club Band is the eighth studio album by the English rock band the Beatles. Released on 26 May 1967,[nb 1] Sgt. Pepper is regarded by musicologists as an early concept album that advanced the roles of sound composition, extended form, psychedelic imagery, record sleeves, and the producer in popular music. The album had an immediate cross-generational impact and was associated with numerous touchstones of the era's youth culture, such as fashion, drugs, mysticism, and a sense of optimism and empowerment. Critics lauded the album for its innovations in songwriting, production and graphic design, for bridging a cultural divide between popular music and high art, and for reflecting the interests of contemporary youth and the counterculture.",
+        "link": "https://en.wikipedia.org/wiki/Sgt._Pepper%27s_Lonely_Hearts_Club_Band" 
+    }
+]

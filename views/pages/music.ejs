@@ -1,1 +1,26 @@
-<h2 class="block__title"><%= title  %></h2>
+<section class="music pg-block">
+    <h2 class="block__title"><%= title  %></h2>
+    <ul class="music-items row">
+        <%= music.discription%>
+        <% music.forEach(function(elem) { %> 
+            <li class="card col s6" id= <%= music.id %>>
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img src=<%= elem.img%> class="activator">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4"><%= elem.album %><i class="material-icons right">more_vert</i></span>
+                  <span class="card-title activator grey-text text-darken-4"><%= elem.artist %></span>
+                  <p>
+                    <a href=<%= elem.link %>>Link Wiki</a>
+                </p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4"><%= elem.album %><i class="material-icons right">close</i></span>
+                  <p><%= elem.discription %></p>
+                </div>
+              </li>
+        <% }); %>
+        
+    </ul>
+    
+</section>
