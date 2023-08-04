@@ -1,5 +1,6 @@
 import express from "express";
 import expressEjsLayouts from "express-ejs-layouts";
+import bodyParser from "body-parser";
 
 import homeRoutes from './routes/home.js';
 import aboutRoutes from './routes/about.js';
@@ -8,6 +9,9 @@ import loginRoutes from './routes/login.js';
 
 const PORT = process.env.PORT || 3000;
 const app = express();
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json())
 
 app.use(expressEjsLayouts);
 app.set('layout', './layout/main');

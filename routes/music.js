@@ -1,3 +1,4 @@
+import { log } from "console";
 import { Router } from "express";
 import fs from 'fs';
 
@@ -12,6 +13,17 @@ router.get('/music', (req, res) => {
             isMusic: true
         }
     );
+});
+router.get('/addmusic', (req, res) => {
+    res.render('pages/addMusic',
+        {
+            title: "Add new Music",
+        }
+    );
+});
+router.post('/addmusic', (req, res) => {
+    console.log(req.body);
+    res.redirect('/music')
 });
 
 export default router;

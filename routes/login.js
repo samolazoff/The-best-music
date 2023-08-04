@@ -11,4 +11,9 @@ router.get('/login', (req, res) => {
     );
 });
 
+router.post('/login', (req,res) => {
+    console.log(req.body);
+    res.redirect('/')
+})
+
 export default router;
