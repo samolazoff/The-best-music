@@ -26,3 +26,20 @@
 .music-items{
     grid-gap: 20px;
 }
+.wrap{
+    display: flex;
+    flex-direction: column;
+}
+section{
+    min-height: 80vh;
+}
+.music-items{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.card{
+    height: 500px;
+    width: 320px;
+}
