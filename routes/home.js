@@ -13,5 +13,16 @@ router.get('/', (req, res) => {
         }
     );
 });
+router.get('/addnews', (req, res) => {
+    res.render('pages/addNews',
+        {
+            title: "Add new News"
+        }
+    );
+});
+router.post('/addnews', (req, res) => {
+    console.log(req.body);
+    res.redirect('/')
+});
 
 export default router;
