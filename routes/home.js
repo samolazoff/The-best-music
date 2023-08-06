@@ -15,8 +15,8 @@ const newsShema = new Schema({
 const News = model('News', newsShema);
 const router = Router();
 
-router.get('/', (req, res) => {
-    const news=JSON.parse(fs.readFileSync('public/data/news.json', 'utf8'));
+router.get('/', async (req, res) => {
+    const news= await News.find();
     res.render('pages/index',
         {
             news,

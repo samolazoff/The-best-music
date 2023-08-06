@@ -29,8 +29,8 @@ const musicSchema =new Schema({
 
 const Music= model('Music', musicSchema);
 
-router.get('/music', (req, res) => {
-    const music=JSON.parse(fs.readFileSync('public/data/music.json', 'utf8'));
+router.get('/music', async(req, res) => {
+    const music= await Music.find();
     res.render('pages/music',
         {
             music,

@@ -4,22 +4,22 @@
       <a href="/addmusic" class="waves-effect waves-light btn-large">ADD</a>
     </div>
     <ul class="music-items">
-        <%= music.discription%>
+        <%= music.urlDescription%>
         <% music.forEach(function(elem) { %> 
             <li class="card col s4" id= <%= music.id %>>
                 <div class="card-image waves-effect waves-block waves-light">
-                  <img src=<%= elem.img%> class="activator">
+                  <img src=<%= elem.urlImg%> class="activator">
                 </div>
                 <div class="card-content">
                   <span class="card-title activator grey-text text-darken-4"><%= elem.album %><i class="material-icons right">more_vert</i></span>
                   <span class="card-title activator grey-text text-darken-4"><%= elem.artist %></span>
                   <p>
-                    <a href=<%= elem.link %>>Link Wiki</a>
+                    <a href=<%= elem.urlWiki %>>Link Wiki</a>
                 </p>
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4"><%= elem.album %><i class="material-icons right">close</i></span>
-                  <p><%= elem.discription %></p>
+                  <p><%= elem.urlDescription %></p>
                 </div>
               </li>
         <% }); %>
