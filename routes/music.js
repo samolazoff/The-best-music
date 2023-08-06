@@ -31,6 +31,7 @@ const Music= model('Music', musicSchema);
 
 router.get('/music', async(req, res) => {
     const music= await Music.find();
+    console.log(music[0].id);
     res.render('pages/music',
         {
             music,

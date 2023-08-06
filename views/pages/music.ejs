@@ -6,7 +6,7 @@
     <ul class="music-items">
         <%= music.urlDescription%>
         <% music.forEach(function(elem) { %> 
-            <li class="card col s4" id= <%= music.id %>>
+            <li class="card col s4" id= <%= elem.id %>>
                 <div class="card-image waves-effect waves-block waves-light">
                   <img src=<%= elem.urlImg%> class="activator">
                 </div>
