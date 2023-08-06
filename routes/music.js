@@ -55,7 +55,6 @@ router.post('/addmusic', async (req, res) => {
         urlWiki: req.body.link
     });
     try {
-        console.log(req.body);
         await music.save();
         res.redirect('/music')
     } catch (error) {

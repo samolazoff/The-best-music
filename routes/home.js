@@ -1,6 +1,18 @@
 import { Router } from "express";
 import fs from 'fs';
+import { Schema, model } from "mongoose";
 
+const newsShema = new Schema({
+    date: {
+        type: String,
+        required: true
+    },
+    news: {
+        type: String,
+        required: true
+    },
+});
+const News = model('News', newsShema);
 const router = Router();
 
 router.get('/', (req, res) => {
@@ -20,9 +32,18 @@ router.get('/addnews', (req, res) => {
         }
     );
 });
-router.post('/addnews', (req, res) => {
-    console.log(req.body);
-    res.redirect('/')
+router.post('/addnews', async (req, res) => {
+
+   const news = new News({
+        date: req.body.date,
+        news: req.body.news 
+    });
+    try {
+        await news.save();
+        res.redirect('/');
+    } catch (error) {
+        console.log(error);
+    }
 });
 
 export default router;
