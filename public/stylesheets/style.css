@@ -40,8 +40,14 @@ section{
     gap: 40px;
 }
 .card{
-    height: 500px;
+    height: 600px;
     width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card .admin-btn{
+    margin-bottom: 20px;
 }
 footer{
     align-self: center;

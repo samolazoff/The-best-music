@@ -6,22 +6,26 @@
     <ul class="music-items">
         <%= music.urlDescription%>
         <% music.forEach(function(elem) { %> 
-            <li class="card col s4" id= <%= elem.id %>>
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img src=<%= elem.urlImg%> class="activator">
-                </div>
-                <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4"><%= elem.album %><i class="material-icons right">more_vert</i></span>
-                  <span class="card-title activator grey-text text-darken-4"><%= elem.artist %></span>
-                  <p>
-                    <a href=<%= elem.urlWiki %>>Link Wiki</a>
-                </p>
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4"><%= elem.album %><i class="material-icons right">close</i></span>
-                  <p><%= elem.urlDescription %></p>
-                </div>
-              </li>
+          <li class="card col s4" id= <%= elem.id %>>
+            <div class="card-image waves-effect waves-block waves-light">
+              <img src=<%= elem.urlImg%> class="activator card__img">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"><%= elem.album %><i class="material-icons right">more_vert</i></span>
+              <span class="card-title activator grey-text text-darken-4"><%= elem.artist %></span>
+              <p>
+                <a href=<%= elem.urlWiki %>>Link Wiki</a>
+            </p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4"><%= elem.album %><i class="material-icons right">close</i></span>
+              <p><%= elem.urlDescription %></p>
+            </div>
+            <div class="admin-btn">
+              <button class="waves-effect waves-light btn-large">Change</button>
+              <button class="waves-effect waves-light btn-large  red darken-4">Delete</button>
+            </div>
+          </li>
         <% }); %>
         
     </ul>
