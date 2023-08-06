@@ -1,6 +1,9 @@
 import express from "express";
 import expressEjsLayouts from "express-ejs-layouts";
 import bodyParser from "body-parser";
+import mongoose from "mongoose";
+// import dotenv from 'dotenv';
+import 'dotenv/config';
 
 import homeRoutes from './routes/home.js';
 import aboutRoutes from './routes/about.js';
@@ -9,6 +12,8 @@ import loginRoutes from './routes/login.js';
 
 const PORT = process.env.PORT || 3000;
 const app = express();
+// const USER_DB ='samolazovromanalex';
+// const PASSWORD_DB = '6B6VKjscB3Zce3vU';
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
@@ -24,6 +29,19 @@ app.use(aboutRoutes);
 app.use(musicRoutes);
 app.use(loginRoutes);
 
-app.listen(PORT, () => {
-    console.log(`Server is runnig: ${PORT}`);
-});
+
+async function start() {
+    const URL_DB = `mongodb+srv://${process.env.USER_DB}:${process.env.PASSWORD_DB}@thebestmusc.3eztrpe.mongodb.net/?retryWrites=true&w=majority`;
+    try {
+
+        await mongoose.connect(URL_DB, {useNewUrlParser: true});
+
+        app.listen(PORT, () => {
+        console.log(`Server is runnig: ${PORT}`);
+    });
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+start();
