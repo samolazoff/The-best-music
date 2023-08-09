@@ -47,6 +47,9 @@ section{
     justify-content: space-between;
 }
 .card .admin-btn{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
     margin-bottom: 20px;
 }
 footer{

@@ -30,7 +30,8 @@ app.use(loginRoutes);
 async function start() {
     const URL_DB = `mongodb+srv://${process.env.USER_DB}:${process.env.PASSWORD_DB}@thebestmusc.3eztrpe.mongodb.net/Music`;
     try {
-        await mongoose.connect(URL_DB, {useNewUrlParser: true});
+        await mongoose.connect(URL_DB, {
+            useNewUrlParser: true});
         app.listen(PORT, () => {
         console.log(`Server is runnig: ${PORT}`);
     });

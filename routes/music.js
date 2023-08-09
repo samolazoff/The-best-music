@@ -62,5 +62,15 @@ router.post('/addmusic', async (req, res) => {
         console.log(error);
     }
 });
+router.post('/music/remove', async (req, res) => {
+    try {
+        await Music.deleteOne({
+            _id: req.body.deleteMusicId
+        });
+        res.redirect('/music')
+    } catch (error) {
+        console.log(error);
+    }
+});
 
 export default router;

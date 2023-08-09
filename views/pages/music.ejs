@@ -6,7 +6,7 @@
     <ul class="music-items">
         <%= music.urlDescription%>
         <% music.forEach(function(elem) { %> 
-          <li class="card col s4" id= <%= elem.id %>>
+          <li class="card col s4">
             <div class="card-image waves-effect waves-block waves-light">
               <img src=<%= elem.urlImg%> class="activator card__img">
             </div>
@@ -23,7 +23,10 @@
             </div>
             <div class="admin-btn">
               <button class="waves-effect waves-light btn-large">Change</button>
-              <button class="waves-effect waves-light btn-large  red darken-4">Delete</button>
+              <form method="post" action="/music/remove">
+                <input type="hidden" name="deleteMusicId" value=<%= elem.id %>>
+                <button class="waves-effect waves-light btn-large  red darken-4" type="submit">Delete</button>
+              </form>
             </div>
           </li>
         <% }); %>
