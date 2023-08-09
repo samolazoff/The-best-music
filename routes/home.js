@@ -1,5 +1,4 @@
 import { Router } from "express";
-import fs from 'fs';
 import { Schema, model } from "mongoose";
 
 const newsShema = new Schema({
@@ -45,7 +44,26 @@ router.post('/addnews', async (req, res) => {
         console.log(error);
     }
 });
-
+router.get('/news/edit/:id', async (req, res) => {
+    const news = await News.findById(req.params.id);
+     try {
+         res.render('pages/editNews',{
+            news,
+            title: `Edit news (${news.date})`
+         })
+     } catch (error) {
+         console.log(error);
+     }
+ });
+router.post('/news/edit/', async (req, res) => {
+    const id =req.body.newsId;
+     try {
+        await News.findByIdAndUpdate(id, req.body);
+        res.redirect('/')
+     } catch (error) {
+        console.log(error);
+     }
+});
 router.post('/news/remove', async (req, res) => {
      try {
          await News.deleteOne({
@@ -55,6 +73,6 @@ router.post('/news/remove', async (req, res) => {
      } catch (error) {
          console.log(error);
      }
- });
+});
 
 export default router;

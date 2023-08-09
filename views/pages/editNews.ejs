@@ -1,0 +1,25 @@
+<section class="edit-news">
+    <h2 class="block__title"><%= title  %></h2>
+    <form action="/news/edit" class="col s12" method="post">
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="dateEdit" type="date" class="validate" name="date" value="<%= news.date%>">
+                <label for="dateEdit">Date</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="newsEdit" type="text" class="validate" name="news" value="<%= news.news%>">
+                <label for="newsEdit">News</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="newsId" type="hidden" name="newsId" value="<%= news.id%>">
+            </div>
+        </div>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+        </button
+    </form>
+</section>
