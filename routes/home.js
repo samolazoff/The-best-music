@@ -46,4 +46,15 @@ router.post('/addnews', async (req, res) => {
     }
 });
 
+router.post('/news/remove', async (req, res) => {
+     try {
+         await News.deleteOne({
+            _id: req.body.deleteNewsId
+         });
+         res.redirect('/');
+     } catch (error) {
+         console.log(error);
+     }
+ });
+
 export default router;

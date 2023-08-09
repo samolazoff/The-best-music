@@ -8,6 +8,13 @@
             <li class="block-news__item">
                 <h5 class="block-news__title"><%= elem.date %></h5>
                 <p class="block-news__txt"><%= elem.news %>.</p>
+                <div class="admin-btn">
+                    <a class="waves-effect waves-light btn-large">Change</a>
+                    <form method="post" action="/news/remove">
+                      <input type="hidden" name="deleteNewsId" value=<%= elem.id %>>
+                      <button class="waves-effect waves-light btn-large  red darken-4" type="submit">Delete</button>
+                    </form>
+                  </div>
             </li>
         <% }); %>
     </ul>

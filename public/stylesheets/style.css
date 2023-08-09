@@ -52,6 +52,12 @@ section{
     gap: 10px;
     margin-bottom: 20px;
 }
+.block-news .admin-btn{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
 footer{
     align-self: center;
 }
