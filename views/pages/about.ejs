@@ -1,4 +1,14 @@
 <section class="about pg-block">
     <h2 class="block__title"><%= title  %></h2>
-    <p>This API is about the best my music!</p>
+    <div class="admin-btn">
+        <a href="/path/add" class="waves-effect waves-light btn-large">ADD</a>
+      </div>
+    <ul class="items-path">
+        <% allPath.forEach(function(elem) { %>
+            <li class="item">
+                <span class="title__path"><%= elem.titlePath  %></span>
+                <span class="des__path"> - <%= elem.desPath  %></span>
+            </li>
+        <% }); %>
+    </ul>
 </section>

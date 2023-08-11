@@ -64,3 +64,9 @@ footer{
 .admin-btn{
     text-align: center;
 }
+.items-path .item{
+    font-size: 1.3rem;
+}
+.title__path{
+    font-weight: 700;
+}
