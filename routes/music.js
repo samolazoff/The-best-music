@@ -31,7 +31,6 @@ const Music= model('Music', musicSchema);
 
 router.get('/music', async(req, res) => {
     const music= await Music.find();
-    console.log(music[0].id);
     res.render('pages/music',
         {
             music,
@@ -71,6 +70,39 @@ router.post('/music/remove', async (req, res) => {
     } catch (error) {
         console.log(error);
     }
+});
+router.get('/music/edit/:id', async (req, res) => {
+    const music = await Music.findById(req.params.id);
+    try {
+        res.render('pages/editMusic',
+        {
+            music,
+            title: `Edit music album: ${music.album}`,
+        }
+    );
+    } catch (error) {
+        console.log(error);
+    }
+    
+});
+router.post('/music/edit', async (req, res) => {
+    const id = req.body.musicId;
+    console.log(id);
+    try {
+        await Music.findByIdAndUpdate(id, 
+            {
+                album: req.body.album,
+                artist: req.body.artist,
+                urlImg: req.body.img,
+                urlDescription: req.body.description,
+                urlWiki: req.body.link
+            }
+            );
+        res.redirect('/music')
+    } catch (error) {
+        console.log(error);
+    }
+    
 });
 
 export default router;

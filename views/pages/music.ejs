@@ -22,7 +22,7 @@
               <p><%= elem.urlDescription %></p>
             </div>
             <div class="admin-btn">
-              <button class="waves-effect waves-light btn-large">Change</button>
+              <a href="/music/edit/<%= elem.id  %>" class="waves-effect waves-light btn-large">Change</a>
               <form method="post" action="/music/remove">
                 <input type="hidden" name="deleteMusicId" value=<%= elem.id %>>
                 <button class="waves-effect waves-light btn-large  red darken-4" type="submit">Delete</button>
